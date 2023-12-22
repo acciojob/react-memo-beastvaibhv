@@ -13,7 +13,7 @@ const App = ()=>{
          {/* Counter + explensive Calculation */}
          <p id="incr-cnt">Count:{count} <button id="incr-cnt" onClick={()=>setCount(count + 1)}>+</button></p> 
          <br />
-         <h3>Expensive Calculation</h3>
+         <h3 id="calc">Expensive Calculation</h3>
          <hr/>
          <hr/>
          <Memo/>
