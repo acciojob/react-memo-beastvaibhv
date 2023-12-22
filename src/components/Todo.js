@@ -19,7 +19,7 @@ const Todo = () => {
   return (
     <div>
         <h1>To-Do List</h1>
-        <input type="text" onChange={handleTask} value={text}  /> <button onClick={handleAddingTask}>Add Todo</button>
+        <input type="text" onChange={handleTask} value={text}  /> <button  id= "add-todo-btn" onClick={handleAddingTask}>Add Todo</button>
         <ul style={{listStyleType:"numeric"}}>
           {task.map((item, index)=>(<li key={index}>  <p className="task">{item}</p> </li>))}
         </ul>

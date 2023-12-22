@@ -24,6 +24,7 @@ const Memo= ()=>{
             <br/>
             <br/>
          <input
+         id="skill-input"
          type ="text"
          onChange={handleSkill}
          value ={skill}
