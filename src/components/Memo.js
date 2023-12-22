@@ -9,7 +9,7 @@ const Memo= ()=>{
     }
 
     const handleAddSkill = ()=>{
-        if(skill.length >= 5){
+        if(skill.length > 5){
           setSkillList([...skillList, skill]);
           setSkill("");
         }
@@ -32,7 +32,7 @@ const Memo= ()=>{
          <button id="skill-btn" type="button" onClick={handleAddSkill}>Add Skill</button>
 
          <ul>
-            {skillList.map((item, index)=> <li key={index}> {item}</li>)}
+            {skillList.map((item, index)=> <li key={index} id={"item-"+item}> {item}</li>)}
          </ul>
         </div>
     )

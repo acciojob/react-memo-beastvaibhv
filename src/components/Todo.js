@@ -1,28 +1,32 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 
 
 const Todo = () => {
+  let[isClicked, setIsClicked] =useState(false)
   let [task, setTask] = useState([]);
-  let [text, setText] = useState("");
-  const handleTask=(e)=>{
-    const t = e.target.value;
-    setText(t);
-  }
+  
+
+   useEffect(()=>{
+        handleAddingTask();
+   },[isClicked]);
+
   const handleAddingTask =()=>{
-    if(text.trim()!== ""){
-    setTask(prevItems=>[...prevItems, text]);
-    }
-    setText("");
+    
+    setTask(prevItems=>[...prevItems, "New Todo"]);
+    
+    
    
   }
   
   return (
     <div>
-        <h1>To-Do List</h1>
-        <input type="text" onChange={handleTask} value={text}  /> <button  id= "add-todo-btn" onClick={handleAddingTask}>Add Todo</button>
-        <ul style={{listStyleType:"numeric"}}>
+        <h1>My todos</h1>
+       
+        <ul style={{listStyleType:"none"}}>
+            
           {task.map((item, index)=>(<li key={index} id={"todo-"+index}>{item} </li>))}
         </ul>
+        <button  id= "add-todo-btn" onClick={()=>setIsClicked(true)}>Add Todo</button>
     </div>
   )
 }
