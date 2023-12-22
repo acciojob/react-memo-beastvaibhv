@@ -11,9 +11,13 @@ const App = ()=>{
         <Todo/>
         <hr/>
          {/* Counter + explensive Calculation */}
-         <p id="incr-cnt">Count:{count} <button id="incr-cnt" onClick={()=>setCount(count + 1)}>+</button></p> 
+         <p id="incr-cnt">Count: 0 <button id="incr-cnt" onClick={()=>setCount(count + 1000000000)}>+</button></p> 
          <br />
-         <h3 id="calc">Expensive Calculation</h3>
+         <div  id="calc">
+         <h3>Expensive Calculation</h3>
+         <h3>{count}</h3>
+         </div>
+         
          <hr/>
          <hr/>
          <Memo/>
