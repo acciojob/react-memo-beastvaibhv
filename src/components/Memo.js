@@ -29,7 +29,7 @@ const Memo= ()=>{
          onChange={handleSkill}
          value ={skill}
          ></input>
-         <button type="button" onClick={handleAddSkill}>Add Skill</button>
+         <button id="skill-btn" type="button" onClick={handleAddSkill}>Add Skill</button>
 
          <ul>
             {skillList.map((item, index)=> <li key={index}> {item}</li>)}
